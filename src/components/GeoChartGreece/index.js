@@ -142,7 +142,7 @@ export function GeoChartGreece() {
     }, [geoData, data]);
 
     return (
-        <div>
+        <div className='pb-5'>
             <h2>Birth Rates in Greece by Region</h2>
             <svg ref={svgRef}></svg>
         </div>
