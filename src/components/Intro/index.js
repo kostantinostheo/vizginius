@@ -50,7 +50,6 @@ export default function Intro()
         ["2021", 85346, 143923],
         ["2022", 76095, 140801],
     ];
-      
     const options = {
         title: "Annual Births and Deaths in Greece from 1980 to 2022",
         titleTextStyle: {
@@ -100,6 +99,7 @@ export default function Intro()
             fill: 'transparent' // Transparent or any color you prefer
           }
     };
+    
     return(
     <>
         <h1 className='text-blue text-[40px] p-5 text-left font-bold'>
