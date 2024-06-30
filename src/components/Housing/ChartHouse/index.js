@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { Chart } from 'react-google-charts';
+import Switch from "react-switch";
+import { FaChartLine, FaChartColumn, FaEye, FaEyeSlash } from "react-icons/fa6";
 
 export default function ChartHouse() {
     const initialSqMeterValue = 80; // Default square meter value
 
     const [sqMeterValue, setSqMeterValue] = useState(initialSqMeterValue);
+    const [isLineChart, setIsLineChart] = useState(true); // State to toggle chart type
+    const [showPrice, setShowPrice] = useState(true); // State to toggle price series
+    const [showWage, setShowWage] = useState(true); // State to toggle wage series
+    const [showRent, setShowRent] = useState(true); // State to toggle rent series
 
     const data = [
-        ["Year", `Price (€/${sqMeterValue}sqm)`, "Average Wage (€/year)", `Average Rent (€/${sqMeterValue}sqm/year)`],
+        ["Year", `Average House Price (€/${sqMeterValue}sqm)`, "Average Wage (€/year)", `Average Rent (€/${sqMeterValue}sqm/year)`],
         ["2000", 600, 17329, 4.50 * sqMeterValue * 12],
         ["2001", 630, 17912, 4.60 * sqMeterValue * 12],
         ["2002", 660, 17540, 4.70 * sqMeterValue * 12],
@@ -36,7 +42,7 @@ export default function ChartHouse() {
     ];
 
     const options = {
-        title: `Price (€/${sqMeterValue}sqm) vs Average Wage (€/year)`,
+        title: `Average House Price (€/${sqMeterValue}sqm) vs Average Wage (€/year)`,
         titleTextStyle: {
             color: '#FFFFFF', // Title text color
         },
@@ -66,8 +72,9 @@ export default function ChartHouse() {
         },
         seriesType: 'bars',
         series: {
-            1: { type: 'line', pointSize: 5, pointShape: 'circle' },
-            2: { type: 'bar', lineDashStyle: [4, 4], pointSize: 5, pointShape: 'triangle' },
+            0: { type: !isLineChart ? 'line' : 'bars', pointSize: 5, pointShape: 'circle', visibleInLegend: showPrice },
+            1: { type: !isLineChart ? 'line' : 'bars', pointSize: 5, pointShape: 'circle', visibleInLegend: showWage },
+            2: { type: !isLineChart ? 'line' : 'bars', pointSize: 5, pointShape: 'circle', visibleInLegend: showRent },
         },
         legend: {
             textStyle: {
@@ -83,10 +90,22 @@ export default function ChartHouse() {
         const value = parseInt(event.target.value, 10);
         setSqMeterValue(value);
     };
+    const handleChartTypeToggle = () => {
+        setIsLineChart(!isLineChart);
+    };
+    const handleTogglePrice = () => {
+        setShowPrice(!showPrice);
+    };
+    const handleToggleWage = () => {
+        setShowWage(!showWage);
+    };
+    const handleToggleRent = () => {
+        setShowRent(!showRent);
+    };
 
     const chartData = [
-        ['Year', `Price for ${sqMeterValue} sqm (€)`, 'Average Wage (€/year)', `Average Rent (€/${sqMeterValue}sqm/year)`],
-        ...data.slice(1).map(row => [row[0], row[1] * sqMeterValue, row[2], row[3] ])
+        ['Year', `Average House Price (${sqMeterValue} sqm/€)`, 'Average Wage (€/year)', `Average Rent (€/${sqMeterValue}sqm/year)`],
+        ...data.slice(1).map(row => [row[0], showPrice ? row[1] * sqMeterValue : 0, showWage ? row[2] : 0, showRent ? row[3] : 0])
     ];
 
     const priceChangeRatio = ((chartData[chartData.length - 1][1] / chartData[1][1]) * 100).toFixed(1);
@@ -104,19 +123,89 @@ export default function ChartHouse() {
                 options={options}
                 legendToggle
             />
-            <div className='mb-6'>
-                <label htmlFor="sqMeterSlider" className='text-white mr-3'>Square Meters: {sqMeterValue}</label>
-                <input
-                    type="range"
-                    id="sqMeterSlider"
-                    name="sqMeterSlider"
-                    min="1"
-                    max="100"
-                    value={sqMeterValue}
-                    onChange={handleSqMeterChange}
-                    className='w-3/4'
-                    style={{ width: '400px', backgroundColor: '#0666E5' }}
-                />
+            <div className='mb-6 flex justify-center items-center gap-x-6'>
+                <div>
+                    <label htmlFor="sqMeterSlider" className='text-white mr-3'>Square Meters: {sqMeterValue}</label>
+                    <input
+                        type="range"
+                        id="sqMeterSlider"
+                        name="sqMeterSlider"
+                        min="1"
+                        max="100"
+                        value={sqMeterValue}
+                        onChange={handleSqMeterChange}
+                        className='w-3/4'
+                        style={{ width: '400px', backgroundColor: '#0666E5' }}
+                    />
+                </div>
+                
+
+                <div>
+                <div className='flex gap-x-5'>
+                    <div className='flex justify-center items-center gap-x-1'>
+                        <label>Toggle to {!isLineChart ? 'Bar Chart' : 'Line Chart'} </label>
+                        <Switch  
+                            onChange={handleChartTypeToggle} 
+                            checked={isLineChart} 
+                            uncheckedIcon={
+                                <div className='h-full flex items-center'>
+                                    <FaChartColumn className='w-full'/>
+                                </div>
+                            }
+                            checkedIcon={
+                            <div className='h-full flex items-center'>
+                                <FaChartLine className='w-full'/>
+                            </div>}
+                            onColor='#3281a8'
+                            offColor='#3281a8'
+                        />
+                    </div>  
+                    <div className='flex justify-center items-center gap-x-1'>
+                        <label>Toggle Price</label>
+                        <Switch  onChange={handleTogglePrice} checked={showPrice} 
+                        uncheckedIcon={
+                            <div className='h-full flex items-center'>
+                                <FaEyeSlash className='w-full'/>
+                            </div>
+                        }
+                        checkedIcon={
+                        <div className='h-full flex items-center'>
+                            <FaEye className='w-full'/>
+                        </div>}
+                        onColor='#3281a8'
+                        offColor='#38496b'/>
+                    </div>                <div className='flex justify-center items-center gap-x-1'>
+                        <label>Toggle Rent</label>
+                        <Switch  onChange={handleToggleRent} checked={showRent} 
+                        uncheckedIcon={
+                            <div className='h-full flex items-center'>
+                                <FaEyeSlash className='w-full'/>
+                            </div>
+                        }
+                        checkedIcon={
+                        <div className='h-full flex items-center'>
+                            <FaEye className='w-full'/>
+                        </div>}
+                        onColor='#3281a8'
+                        offColor='#38496b'/>
+                    </div>                <div className='flex justify-center items-center gap-x-1'>
+                        <label>Toggle Wage</label>
+                        <Switch  onChange={handleToggleWage} checked={showWage}
+                        uncheckedIcon={
+                            <div className='h-full flex items-center'>
+                                <FaEyeSlash className='w-full'/>
+                            </div>
+                        }
+                        checkedIcon={
+                        <div className='h-full flex items-center'>
+                            <FaEye className='w-full'/>
+                        </div>}
+                        onColor='#3281a8'
+                        offColor='#38496b'/>
+                    </div>
+                </div>    
+
+            </div>
             </div>
             <div className='mr-52 ml-52 bg-[#11151f]'>
                 <table style={{ width: '100%', color: '#FFFFFF', borderCollapse: 'collapse' }}>
