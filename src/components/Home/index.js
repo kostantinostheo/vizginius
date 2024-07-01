@@ -1,5 +1,6 @@
 import Intro from "../Intro";
 import GeoChartGreece from "../GeoChartGreece"
+import Mothers from "../Mothers";
 
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
       <div className="App">
         <Intro/>
         <GeoChartGreece/>
+        <Mothers/>
       </div>
     );
   }
