@@ -124,7 +124,7 @@ export default function ChartHouse() {
                 legendToggle
             />
             <div className='mb-6 flex justify-center items-center gap-x-6'>
-                <div>
+                <div className='flex items-center justify-center'>
                     <label htmlFor="sqMeterSlider" className='text-white mr-3'>Square Meters: {sqMeterValue}</label>
                     <input
                         type="range"
@@ -134,8 +134,7 @@ export default function ChartHouse() {
                         max="100"
                         value={sqMeterValue}
                         onChange={handleSqMeterChange}
-                        className='w-3/4'
-                        style={{ width: '400px', backgroundColor: '#0666E5' }}
+                        className=''
                     />
                 </div>
                 
