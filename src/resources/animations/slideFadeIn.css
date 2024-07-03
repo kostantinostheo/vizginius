@@ -27,4 +27,11 @@
   .chart-animate {
     animation: slideInRight 1s ease-in-out forwards;
   }
+
+  .leftToRightAnimate {
+    animation: slideInLeft 1s ease-in-out forwards;
+  }
+  .rightToLeftAnimate {
+    animation: slideInRight 1s ease-in-out forwards;
+  }
   
