@@ -1,4 +1,313 @@
-Region,Birth Rate
-Central Greece,1.2
-Attica,1.3
-Peloponnese,1.1
+Region,Birth Rate,Year
+Peloponnese,4783,1999
+Peloponnese,5035,2000
+Peloponnese,4875,2001
+Peloponnese,4785,2002
+Peloponnese,4945,2003
+Peloponnese,4979,2004
+Peloponnese,5120,2005
+Peloponnese,5356,2006
+Peloponnese,5331,2007
+Peloponnese,5614,2008
+Peloponnese,5655,2009
+Peloponnese,5607,2010
+Peloponnese,4999,2011
+Peloponnese,4828,2012
+Peloponnese,4433,2013
+Peloponnese,4407,2014
+Peloponnese,4320,2015
+Peloponnese,4385,2016
+Peloponnese,4239,2017
+Peloponnese,4056,2018
+Peloponnese,3926,2019
+Peloponnese,4005,2020
+Peloponnese,4060,2021
+Peloponnese,3661,2022
+East Macedonia and Thrace,5809,1999
+East Macedonia and Thrace,5847,2000
+East Macedonia and Thrace,5797,2001
+East Macedonia and Thrace,5796,2002
+East Macedonia and Thrace,5725,2003
+East Macedonia and Thrace,5774,2004
+East Macedonia and Thrace,6038,2005
+East Macedonia and Thrace,6208,2006
+East Macedonia and Thrace,6108,2007
+East Macedonia and Thrace,6326,2008
+East Macedonia and Thrace,6442,2009
+East Macedonia and Thrace,6267,2010
+East Macedonia and Thrace,5804,2011
+East Macedonia and Thrace,5325,2012
+East Macedonia and Thrace,5103,2013
+East Macedonia and Thrace,4853,2014
+East Macedonia and Thrace,4950,2015
+East Macedonia and Thrace,4868,2016
+East Macedonia and Thrace,4780,2017
+East Macedonia and Thrace,4381,2018
+East Macedonia and Thrace,4217,2019
+East Macedonia and Thrace,4255,2020
+East Macedonia and Thrace,4350,2021
+East Macedonia and Thrace,3865,2022
+Central Macedonia,18104,1999
+Central Macedonia,18598,2000
+Central Macedonia,18383,2001
+Central Macedonia,18831,2002
+Central Macedonia,18288,2003
+Central Macedonia,18549,2004
+Central Macedonia,19038,2005
+Central Macedonia,19781,2006
+Central Macedonia,19895,2007
+Central Macedonia,20972,2008
+Central Macedonia,20875,2009
+Central Macedonia,19968,2010
+Central Macedonia,18500,2011
+Central Macedonia,17193,2012
+Central Macedonia,16138,2013
+Central Macedonia,15300,2014
+Central Macedonia,15399,2015
+Central Macedonia,15595,2016
+Central Macedonia,14423,2017
+Central Macedonia,14023,2018
+Central Macedonia,13576,2019
+Central Macedonia,13558,2020
+Central Macedonia,13536,2021
+Central Macedonia,12298,2022
+West Macedonia,2840,1999
+West Macedonia,2857,2000
+West Macedonia,2628,2001
+West Macedonia,2649,2002
+West Macedonia,2660,2003
+West Macedonia,2560,2004
+West Macedonia,2568,2005
+West Macedonia,2636,2006
+West Macedonia,2622,2007
+West Macedonia,2696,2008
+West Macedonia,2705,2009
+West Macedonia,2662,2010
+West Macedonia,2357,2011
+West Macedonia,2321,2012
+West Macedonia,2151,2013
+West Macedonia,2139,2014
+West Macedonia,2077,2015
+West Macedonia,1995,2016
+West Macedonia,1986,2017
+West Macedonia,1820,2018
+West Macedonia,1762,2019
+West Macedonia,1808,2020
+West Macedonia,1672,2021
+West Macedonia,1427,2022
+Epirus,2653,1999
+Epirus,2576,2000
+Epirus,2547,2001
+Epirus,2578,2002
+Epirus,2493,2003
+Epirus,2745,2004
+Epirus,2819,2005
+Epirus,3005,2006
+Epirus,2905,2007
+Epirus,3152,2008
+Epirus,3216,2009
+Epirus,3215,2010
+Epirus,2968,2011
+Epirus,2718,2012
+Epirus,2644,2013
+Epirus,2514,2014
+Epirus,2489,2015
+Epirus,2466,2016
+Epirus,2337,2017
+Epirus,2222,2018
+Epirus,2219,2019
+Epirus,2202,2020
+Epirus,2232,2021
+Epirus,1966,2022
+Thessaly,6608,1999
+Thessaly,6686,2000
+Thessaly,6418,2001
+Thessaly,6783,2002
+Thessaly,6756,2003
+Thessaly,6783,2004
+Thessaly,7095,2005
+Thessaly,7448,2006
+Thessaly,7225,2007
+Thessaly,7767,2008
+Thessaly,7683,2009
+Thessaly,7536,2010
+Thessaly,7020,2011
+Thessaly,6439,2012
+Thessaly,6024,2013
+Thessaly,5808,2014
+Thessaly,5818,2015
+Thessaly,5691,2016
+Thessaly,5498,2017
+Thessaly,5329,2018
+Thessaly,5093,2019
+Thessaly,5150,2020
+Thessaly,5165,2021
+Thessaly,4657,2022
+Western Greece,6223,1999
+Western Greece,6579,2000
+Western Greece,6240,2001
+Western Greece,6466,2002
+Western Greece,6423,2003
+Western Greece,6445,2004
+Western Greece,6555,2005
+Western Greece,6594,2006
+Western Greece,6434,2007
+Western Greece,7197,2008
+Western Greece,7133,2009
+Western Greece,6919,2010
+Western Greece,6521,2011
+Western Greece,5897,2012
+Western Greece,5664,2013
+Western Greece,5472,2014
+Western Greece,5489,2015
+Western Greece,5471,2016
+Western Greece,5224,2017
+Western Greece,5002,2018
+Western Greece,4996,2019
+Western Greece,5038,2020
+Western Greece,5024,2021
+Western Greece,4745,2022
+Central Greece,4440,1999
+Central Greece,4547,2000
+Central Greece,4590,2001
+Central Greece,4659,2002
+Central Greece,4820,2003
+Central Greece,4832,2004
+Central Greece,4809,2005
+Central Greece,5071,2006
+Central Greece,4920,2007
+Central Greece,5338,2008
+Central Greece,5210,2009
+Central Greece,5140,2010
+Central Greece,4488,2011
+Central Greece,4353,2012
+Central Greece,4150,2013
+Central Greece,4044,2014
+Central Greece,3948,2015
+Central Greece,4099,2016
+Central Greece,3904,2017
+Central Greece,3803,2018
+Central Greece,3414,2019
+Central Greece,3717,2020
+Central Greece,3643,2021
+Central Greece,3270,2022
+Attica,35965,1999
+Attica,36977,2000
+Attica,36967,2001
+Attica,37481,2002
+Attica,38446,2003
+Attica,38901,2004
+Attica,39182,2005
+Attica,40925,2006
+Attica,41218,2007
+Attica,42899,2008
+Attica,42831,2009
+Attica,41869,2010
+Attica,39564,2011
+Attica,37266,2012
+Attica,34715,2013
+Attica,34453,2014
+Attica,34265,2015
+Attica,34571,2016
+Attica,32968,2017
+Attica,32411,2018
+Attica,31137,2019
+Attica,31256,2020
+Attica,31993,2021
+Attica,28125,2022
+South Aegean,3108,1999
+South Aegean,3069,2000
+South Aegean,3273,2001
+South Aegean,3241,2002
+South Aegean,3381,2003
+South Aegean,3338,2004
+South Aegean,3312,2005
+South Aegean,3378,2006
+South Aegean,3484,2007
+South Aegean,3631,2008
+South Aegean,3702,2009
+South Aegean,3626,2010
+South Aegean,3235,2011
+South Aegean,3338,2012
+South Aegean,3094,2013
+South Aegean,3217,2014
+South Aegean,3128,2015
+South Aegean,3411,2016
+South Aegean,3314,2017
+South Aegean,3329,2018
+South Aegean,3402,2019
+South Aegean,3417,2020
+South Aegean,3496,2021
+South Aegean,3169,2022
+North Aegean,1742,1999
+North Aegean,1797,2000
+North Aegean,1701,2001
+North Aegean,1732,2002
+North Aegean,1699,2003
+North Aegean,1689,2004
+North Aegean,1715,2005
+North Aegean,1748,2006
+North Aegean,1866,2007
+North Aegean,1971,2008
+North Aegean,1914,2009
+North Aegean,1944,2010
+North Aegean,1761,2011
+North Aegean,1761,2012
+North Aegean,1639,2013
+North Aegean,1655,2014
+North Aegean,1646,2015
+North Aegean,1750,2016
+North Aegean,1766,2017
+North Aegean,1891,2018
+North Aegean,1897,2019
+North Aegean,2314,2020
+North Aegean,1720,2021
+North Aegean,1349,2022
+Ionian Islands,1708,1999
+Ionian Islands,1854,2000
+Ionian Islands,1837,2001
+Ionian Islands,1790,2002
+Ionian Islands,1878,2003
+Ionian Islands,1971,2004
+Ionian Islands,2014,2005
+Ionian Islands,2076,2006
+Ionian Islands,2009,2007
+Ionian Islands,2341,2008
+Ionian Islands,2134,2009
+Ionian Islands,2105,2010
+Ionian Islands,1955,2011
+Ionian Islands,1825,2012
+Ionian Islands,1872,2013
+Ionian Islands,1820,2014
+Ionian Islands,1793,2015
+Ionian Islands,1807,2016
+Ionian Islands,1747,2017
+Ionian Islands,1818,2018
+Ionian Islands,1716,2019
+Ionian Islands,1721,2020
+Ionian Islands,1810,2021
+Ionian Islands,1617,2022
+Crete,6061,1999
+Crete,6324,2000
+Crete,6567,2001
+Crete,6472,2002
+Crete,6685,2003
+Crete,6878,2004
+Crete,6901,2005
+Crete,7399,2006
+Crete,7500,2007
+Crete,8009,2008
+Crete,7939,2009
+Crete,7693,2010
+Crete,6946,2011
+Crete,6923,2012
+Crete,6339,2013
+Crete,6359,2014
+Crete,6370,2015
+Crete,6619,2016
+Crete,6251,2017
+Crete,6241,2018
+Crete,6266,2019
+Crete,6199,2020
+Crete,6530,2021
+Crete,5772,2022
