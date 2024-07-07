@@ -45,25 +45,60 @@ const generateData = (year) => {
                 calc: "stringify",
             },
         ],
-        ["0-19", yearData[0], "color: #ffb300", null],
-        ["20-39", yearData[1], "color: #ffb300", null],
-        ["40-59", yearData[2], "color: #ffb300", null],
-        ["60-79", yearData[3], "color: #ffb300", null],
-        ["80+", yearData[4], "color: #ffb300", null],
+        ["0-19", yearData[0], "color: #FFA500", null],
+        ["20-39", yearData[1], "color: #FFA500", null],
+        ["40-59", yearData[2], "color: #FFA500", null],
+        ["60-79", yearData[3], "color: #FFA500", null],
+        ["80+", yearData[4], "color: #FFA500", null],
     ];
     return data;
 };
 
 const options = {
-    width: '100%',
-    height: 400,
-    bar: { groupWidth: "95%" },
-    legend: { position: "none", textStyle: { color: 'white' } },
-    hAxis: { title: "Percentage", textStyle: { color: 'white' }, titleTextStyle: { color: 'white' }, maxValue: 35 },
-    vAxis: { title: "Age Group", textStyle: { color: 'white' }, titleTextStyle: { color: 'white' } },
-    backgroundColor: 'transparent',
-    chartArea: { backgroundColor: 'transparent' },
-    color: 'white'
+    title: "Population Age Distribution",
+    titleTextStyle: {
+        color: '#FFFFFF', // Title text color
+    },
+    curveType: "function",
+    bar: { groupWidth: "80%" },
+    hAxis: {
+        title: "Percentage",
+        textStyle: { color: 'white' },
+        titleTextStyle: { color: 'white' },
+        maxValue: 35,
+        gridlines: {
+            color: '#363c45', // Semi-transparent vertical grid lines
+        },
+    },
+    // Vertical axis
+    vAxis: {
+        title: "Age Group",
+        textStyle: {
+            color: '#FFFFFF', // Y-axis text color
+        },
+        titleTextStyle: {
+            color: '#FFFFFF', // Y-axis title text color
+        },
+        gridlines: {
+            color: '#363c45', // Horizontal grid lines color
+        },
+
+    },
+    // Chart legend
+    legend: {
+        position: 'right',
+        textStyle: {
+            color: '#ffffff', // Legend text color
+        },
+    },
+    series: {
+        0: { color: '#FFA500' }, // Set series color to orange
+    },
+
+    // Optionally set the background color of the chart
+    backgroundColor: {
+        fill: 'transparent' // Transparent or any color you prefer
+    }
 };
 
 const AgeGroupsComponent = () => {
@@ -96,7 +131,6 @@ const AgeGroupsComponent = () => {
 
     return (
         <Box sx={{ width: '70%', margin: 'auto' }}>
-            <h1 style={{ color: 'white', textAlign: 'center' }}>Population Age Distribution in {year}</h1>
             <Chart
                 chartType="BarChart"
                 width="100%"

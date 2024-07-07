@@ -32,8 +32,10 @@ const data = [
 ];
 
 const options = {
-    width: '100%',
-    height: 400,
+    title: "Median Age of Population",
+    titleTextStyle: {
+        color: '#FFFFFF', // Title text color
+    },
     curveType: "function",
     hAxis: { title: "Year", textStyle: { color: 'white' }, titleTextStyle: { color: 'white' } },
     // Vertical axis
@@ -50,20 +52,26 @@ const options = {
         },
 
     },
-    backgroundColor: 'transparent',
-    chartArea: { backgroundColor: 'transparent' },
-    colors: ['#ffb300'],
-    legend: { position: 'none' },
+    // Chart legend
+    legend: {
+        textStyle: {
+            color: '#FFFFFF', // Legend text color
+        },
+    },
+
+    // Optionally set the background color of the chart
+    backgroundColor: {
+        fill: 'transparent' // Transparent or any color you prefer
+    }
 };
 
 const LineChartComponent = () => {
     return (
-        <Box sx={{ width: '70%', margin: 'auto' }}>
-            <h1 style={{ color: 'white', textAlign: 'center' }}>Value Over Time (2003 - 2023)</h1>
+        <Box sx={{ width: '100%', margin: 'auto' }}>
             <Chart
                 chartType="LineChart"
                 width="100%"
-                height="400px"
+                height="100%"
                 data={data}
                 options={options}
             />

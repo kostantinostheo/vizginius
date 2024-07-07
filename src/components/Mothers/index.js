@@ -101,7 +101,7 @@ export default function Mothers(){
         }
     };
     const optionFertility = {
-        title: "Greece - Historical Fertility Rate Datac (Children per mother)",
+        title: "Greece - Historical Fertility Rate Data (Children per mother)",
         titleTextStyle: {
             color: '#FFFFFF', // Title text color
         },
