@@ -57,6 +57,43 @@ export default function Mothers(){
         ["2021", 1.279]
     ];
 
+    const mothersOver40 = [
+        ["Year", "Number of mothers over 40 y.o"],
+        ['1990', 1.336],
+        ['1991', 1.439],
+        ['1992', 1.518],
+        ['1993', 1.592],
+        ['1994', 1.691],
+        ['1995', 1.689],
+        ['1996', 1.681],
+        ['1997', 1.892],
+        ['1998', 1.954],
+        ['1999', 1.999],
+        ['2000', 2.812],
+        ['2001', 2.425],
+        ['2002', 2.608],
+        ['2003', 2.763],
+        ['2004', 3.023],
+        ['2005', 3.122],
+        ['2006', 3.568],
+        ['2007', 3.928],
+        ['2008', 4.450],
+        ['2009', 5.057],
+        ['2010', 5.309],
+        ['2011', 4.958],
+        ['2012', 5.034],
+        ['2013', 5.035],
+        ['2014', 4.949],
+        ['2015', 5.541],
+        ['2016', 6.117],
+        ['2017', 6.328],
+        ['2018', 6.647],
+        ['2019', 7.018],
+        ['2020', 7.111],
+        ['2021', 8.312],
+        ['2022', 7.584],
+    ];
+
     const optionsMother = {
         title: "Average age of the mother at birth",
         titleTextStyle: {
@@ -144,7 +181,50 @@ export default function Mothers(){
             fill: 'transparent' // Transparent or any color you prefer
           }
     };
+    const optionOver40 = {
+        title: "Number of live births of mothers over 40",
+        titleTextStyle: {
+            color: '#FFFFFF', // Title text color
+        },
+        curveType: "function",
+        hAxis: {
+            textStyle: {
+                color: '#FFFFFF', // X-axis text color
+            },
+            titleTextStyle: {
+                color: '#FFFFFF', // X-axis title text color
+            },
+            gridlines: {
+                color: '#435578', // Make horizontal grid lines transparent
+            },
+        },
 
+        vAxis: {
+            textStyle: {
+                color: '#FFFFFF', // Y-axis text color
+            },
+            titleTextStyle: {
+                color: '#FFFFFF', // Y-axis title text color
+            },
+            gridlines: {
+                color: '#435578', // Make horizontal grid lines transparent
+            },
+
+        },
+        // Chart legend
+        legend: {
+            textStyle: {
+                color: '#FFFFFF', // Legend text color
+            },
+        },
+        series: {
+            0: { color: '#fc5603' , type: "line", pointSize: 5 }
+        },
+        // Optionally set the background color of the chart
+        backgroundColor: {
+            fill: 'transparent' // Transparent or any color you prefer
+        }
+    };
     return(
     <>
         <h1 className='text-blue text-[40px] pl-5 text-left font-bold'>
@@ -168,6 +248,14 @@ export default function Mothers(){
                 height="400px"
                 data={fertilityRateData}
                 options={optionFertility}
+                className={'intro-chart chart-animate'}
+            />
+            <Chart
+                chartType="LineChart"
+                width="100%"
+                height="400px"
+                data={mothersOver40}
+                options={optionOver40}
                 className={'intro-chart chart-animate'}
             />
         </div>
