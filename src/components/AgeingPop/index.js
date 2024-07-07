@@ -11,13 +11,22 @@ export default function AgeingPop()
     return(
         <>
             <h1 className='text-blue text-[40px] pl-5 text-left font-bold'>
-                Shrinking Greece: The Population Collapse
+                An ageing population...
             </h1>
-            <p className='text-blue text-[15px] p-5 text-justify '>
-                From 2000 to 2021, the average age of mothers at birth in Greece rose steadily from 29.6 to 32.0 years. This increase aligns with societal trends such as higher education and career prioritization among women. Meanwhile, the fertility rate declined slightly from 1.300 in 2000 to 1.279 in 2021, reflecting economic and cultural factors that influence family planning and childbearing decisions.
-            </p>
-            <div className="flex flex-col justify-center items-center p-1 gap-4">
+            <div className="flex flex-row justify-center">
+                <p className='text-blue w-[40%] text-[15px] p-5 text-justify '>
+                    From 1990 to 2023, the mean age of Greece's population constantly increases. An increasing median
+                    age in a population indicates a demographic shift toward an older population,
+                    driven by lower birth rates, higher life expectancy, and potentially altered migration patterns.
+                    <br/>
+                    The bar chart is attempting to visualize this more analytically, by showing younger population
+                    decreasing, while older population increasing.
+
+                </p>
                 <AgeGroupsComponent/>
+            </div>
+
+            <div className="flex flex-col justify-center items-center p-1 gap-4">
                 <LineChartComponent/>
             </div>
         </>

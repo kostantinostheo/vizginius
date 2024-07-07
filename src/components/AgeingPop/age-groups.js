@@ -143,7 +143,7 @@ const AgeGroupsComponent = () => {
     };
 
     return (
-        <Box sx={{ width: '70%', margin: 'auto' }}>
+        <Box sx={{ width: '70%', margin:'auto', padding: 'top' }}>
             <Chart
                 chartType="BarChart"
                 width="100%"
@@ -163,7 +163,7 @@ const AgeGroupsComponent = () => {
                     valueLabelDisplay="auto"
                     sx={{ color: 'white', flexGrow: 1 }}
                 />
-                <IconButton onClick={togglePlaying} sx={{ color: 'white' }}>
+                <IconButton onClick={togglePlaying} sx={{ color: 'red' }}>
                     {playing ? <PauseIcon /> : <PlayArrowIcon />}
                 </IconButton>
             </Box>
