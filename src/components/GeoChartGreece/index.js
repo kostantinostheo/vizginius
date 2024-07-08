@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import { Chart } from 'react-google-charts';
 import './index.css'
-import { CSSTransition } from 'react-transition-group';
 import csv_data from '../../resources/datasets/birth_rates_greece.csv'
 import greece_geojson from '../../resources/datasets/greece-regions.geojson'
 
