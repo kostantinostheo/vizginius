@@ -1,5 +1,5 @@
 import { Navbar } from "flowbite-react";
-import logo from '../../resources/images/logo.png'
+import logo from '../../resources/images/logo-pie.png'
 import './index.css'
 
 export function CustomNavbar() {
@@ -11,13 +11,10 @@ export function CustomNavbar() {
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse >
-        <Navbar.Link href="/" active className="nav-link">
-          Home
-        </Navbar.Link>
-        <Navbar.Link href="/team" className="nav-link">
-          Team
-        </Navbar.Link>
-        <Navbar.Link href="/ref" className="nav-link">References</Navbar.Link>
+        <Navbar.Link href="/" active className="nav-link">Home</Navbar.Link>
+        <Navbar.Link href="/team" className="nav-link">Team</Navbar.Link>
+        <Navbar.Link href="/about" className="nav-link">About</Navbar.Link>
+        <Navbar.Link href="/video" className="nav-link">Demo Video</Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );

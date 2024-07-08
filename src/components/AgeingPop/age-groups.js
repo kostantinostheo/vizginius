@@ -133,7 +133,7 @@ const AgeGroupsComponent = () => {
                     setData(generateData(newYear));
                     return newYear;
                 });
-            }, 500);
+            }, 250);
         }
         return () => clearInterval(timer);
     }, [playing]);
@@ -151,7 +151,10 @@ const AgeGroupsComponent = () => {
                 data={data}
                 options={options}
             />
-            <Box sx={{ display: 'flex', alignItems: 'center', padding: '20px' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', padding: '20px', gap:'10px' }}>
+                <IconButton onClick={togglePlaying} sx={{ color: '#FFA500' }}>
+                    {playing ? <PauseIcon /> : <PlayArrowIcon />}
+                </IconButton>
                 <Slider
                     value={year}
                     onChange={handleSliderChange}
@@ -163,9 +166,6 @@ const AgeGroupsComponent = () => {
                     valueLabelDisplay="auto"
                     sx={{ color: 'white', flexGrow: 1 }}
                 />
-                <IconButton onClick={togglePlaying} sx={{ color: '#FFA500' }}>
-                    {playing ? <PauseIcon /> : <PlayArrowIcon />}
-                </IconButton>
             </Box>
         </Box>
     );
