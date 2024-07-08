@@ -79,50 +79,50 @@ export function LineChartFiltered() {
     };
 
     const exampleData = [
-      ["Year", "Births", { type: 'string', role: 'tooltip' }, "GDP Per Capita", { role: 'tooltip', type: 'string' }, "Unemployment Rate", { role: 'tooltip', type: 'string' }, "Emigration Rate", { role: 'tooltip', type: 'string'}, "Inflation Rate", { role: 'tooltip', type: 'string' }],
-    ["1980", 148134, '', 5894, '', 2.86, '', 0, '', 19.239, ''],
-    ["1981", 140953, '', 5380, '', 4.04, '', 0, '', 21.612, ''],
-    ["1982", 137275, '', 5579, '', 5.88, '', 0, '', 27.213, ''],
-    ["1983", 132608, '', 5020, '', 7.8, '', 0, '', 20.612, ''],
-    ["1984", 125724, '', 4853, '', 8.09, '', 0, '', 21.918, ''],
-    ["1985", 116481, '', 4814, '', 7.8, '', 0, '', 19.026, ''],
-    ["1986", 112810, '', 5657, '', 7.3, '', 0, '', 18.882, ''],
-    ["1987", 106392, '', 6565, '', 7.33, '', 0, '', 15.253, ''],
-    ["1988", 107505, '', 7598, '', 7.77, '', 0, '', 16.680, ''],
-    ["1989", 101657, '', 7847, '', 7.5, '', 0, '', 14.499, ''],
-    ["1990", 102229, '', 9600, '', 6.98, '', 0, '', 20.691, ''],
-    ["1991", 102620, '', 10188, '', 7.57, '', 0, '', 19.788, ''],
-    ["1992", 104081, '', 11176, '', 8.93, '', 0, '', 14.799, ''],
-    ["1993", 101799, '', 10402, '', 10.18, '', 0, '', 14.429, ''],
-    ["1994", 103763, '', 11091, '', 9.81, '', 0, '', 11.182, ''],
-    ["1995", 101495, '', 12959, '', 10.12, '', 0, '', 9.792, ''],
-    ["1996", 100718, '', 13749, '', 10.40, '', 0, '', 7.636, ''],
-    ["1997", 102038, '', 13428, '', 10.47, '', 0, '', 6.553, ''],
-    ["1998", 100894, '', 13472, '', 12.23, '', 60.119, '', 5.104, ''],
-    ["1999", 100643, '', 13250, '', 12.14, '', 54.175, '', 3.623, ''],
-    ["2000", 103274, '', 12073, '', 11.34, '', 46.993, '', 1.593, ''],
-    ["2001", 102282, '', 12549, '', 10.76, '', 45.909, '', 3.475, ''],
-    ["2002", 103569, '', 14178, '', 10.35, '', 39.378, '', 3.349, ''],
-    ["2003", 104420, '', 18518, '', 9.84, '', 37.433, '', 3.454, ''],
-    ["2004", 105655, '', 21995, '', 10.63, '', 38.041, '', 3.063, ''],
-    ["2005", 107545, '', 22560, '', 10.07, '', 38.583, '', 2.240, ''],
-    ["2006", 112042, '', 24822, '', 8.91, '', 38.368, '', 3.495, ''],
-    ["2007", 111926, '', 28864, '', 8.35, '', 40.400, '', 3.423, ''],
-    ["2008", 118302, '', 32128, '', 7.66, '', 43.044, '', 4.345, ''],
-    ["2009", 117933, '', 29829, '', 9.55, '', 43.686, '', 2.570, ''],
-    ["2010", 114766, '', 26717, '', 12.72, '', 62.041, '', -0.177, ''],
-    ["2011", 106428, '', 25484, '', 17.97, '', 92.404, '', 0.959, ''],
-    ["2012", 100371, '', 21913, '', 24.73, '', 124.694, '', -0.275, ''],
-    ["2013", 94134, '', 21788, '', 27.69, '', 117.094, '', -2.046, ''],
-    ["2014", 92149, '', 21617, '', 26.71, '', 106.804, '', -1.939, ''],
-    ["2015", 91877, '', 18084, '', 24.98, '', 109.351, '', -0.294, ''],
-    ["2016", 92898, '', 17924, '', 23.51, '', 106.535, '', -0.579, ''],
-    ["2017", 88553, '', 18582, '', 21.41, '', 103.327, '', 0.285, ''],
-    ["2018", 86440, '', 19757, '', 19.18, '', 103.049, '', -0.165, ''],
-    ["2019", 83756, '', 19144, '', 17.04, '', 95.020, '', 0.227, ''],
-    ["2020", 84764, '', 17617, '', 15.90, '', 77.837, '', -0.752, ''],
-    ["2021", 85346, '', 20311, '', 14.66, '', 79.596, '', 1.485, ''],
-    ["2022", 76095, '', 20867, '', 12.43, '', 80.307, '', 7.847, '']
+    ["Year", "Births", { type: 'string', role: 'tooltip' }, "GDP Per Capita", { role: 'tooltip', type: 'string' }, "Unemployment Rate %", { role: 'tooltip', type: 'string' }, "Emigration", { role: 'tooltip', type: 'string'}, "Inflation Rate %", { role: 'tooltip', type: 'string' }],
+    ["1980", 148134, '', 5.894, '', 2.86, '', 0, '', 19.239, ''],
+    ["1981", 140953, '', 5.380, '', 4.04, '', 0, '', 21.612, ''],
+    ["1982", 137275, '', 5.579, '', 5.88, '', 0, '', 27.213, ''],
+    ["1983", 132608, '', 5.020, '', 7.8, '', 0, '', 20.612, ''],
+    ["1984", 125724, '', 4.853, '', 8.09, '', 0, '', 21.918, ''],
+    ["1985", 116481, '', 4.814, '', 7.8, '', 0, '', 19.026, ''],
+    ["1986", 112810, '', 5.657, '', 7.3, '', 0, '', 18.882, ''],
+    ["1987", 106392, '', 6.565, '', 7.33, '', 0, '', 15.253, ''],
+    ["1988", 107505, '', 7.598, '', 7.77, '', 0, '', 16.680, ''],
+    ["1989", 101657, '', 7.847, '', 7.5, '', 0, '', 14.499, ''],
+    ["1990", 102229, '', 9.600, '', 6.98, '', 0, '', 20.691, ''],
+    ["1991", 102620, '', 10.188, '', 7.57, '', 0, '', 19.788, ''],
+    ["1992", 104081, '', 11.176, '', 8.93, '', 0, '', 14.799, ''],
+    ["1993", 101799, '', 10.402, '', 10.18, '', 0, '', 14.429, ''],
+    ["1994", 103763, '', 11.091, '', 9.81, '', 0, '', 11.182, ''],
+    ["1995", 101495, '', 12.959, '', 10.12, '', 0, '', 9.792, ''],
+    ["1996", 100718, '', 13.749, '', 10.40, '', 0, '', 7.636, ''],
+    ["1997", 102038, '', 13.428, '', 10.47, '', 0, '', 6.553, ''],
+    ["1998", 100894, '', 13.472, '', 12.23, '', 60.119, '', 5.104, ''],
+    ["1999", 100643, '', 13.250, '', 12.14, '', 54.175, '', 3.623, ''],
+    ["2000", 103274, '', 12.073, '', 11.34, '', 46.993, '', 1.593, ''],
+    ["2001", 102282, '', 12.549, '', 10.76, '', 45.909, '', 3.475, ''],
+    ["2002", 103569, '', 14.178, '', 10.35, '', 39.378, '', 3.349, ''],
+    ["2003", 104420, '', 18.518, '', 9.84, '', 37.433, '', 3.454, ''],
+    ["2004", 105655, '', 21.995, '', 10.63, '', 38.041, '', 3.063, ''],
+    ["2005", 107545, '', 22.560, '', 10.07, '', 38.583, '', 2.240, ''],
+    ["2006", 112042, '', 24.822, '', 8.91, '', 38.368, '', 3.495, ''],
+    ["2007", 111926, '', 28.864, '', 8.35, '', 40.400, '', 3.423, ''],
+    ["2008", 118302, '', 32.128, '', 7.66, '', 43.044, '', 4.345, ''],
+    ["2009", 117933, '', 29.829, '', 9.55, '', 43.686, '', 2.570, ''],
+    ["2010", 114766, '', 26.717, '', 12.72, '', 62.041, '', -0.177, ''],
+    ["2011", 106428, '', 25.484, '', 17.97, '', 92.404, '', 0.959, ''],
+    ["2012", 100371, '', 21.913, '', 24.73, '', 124.694, '', -0.275, ''],
+    ["2013", 94134, '', 21.788, '', 27.69, '', 117.094, '', -2.046, ''],
+    ["2014", 92149, '', 21.617, '', 26.71, '', 106.804, '', -1.939, ''],
+    ["2015", 91877, '', 18.084, '', 24.98, '', 109.351, '', -0.294, ''],
+    ["2016", 92898, '', 17.924, '', 23.51, '', 106.535, '', -0.579, ''],
+    ["2017", 88553, '', 18.582, '', 21.41, '', 103.327, '', 0.285, ''],
+    ["2018", 86440, '', 19.757, '', 19.18, '', 103.049, '', -0.165, ''],
+    ["2019", 83756, '', 19.144, '', 17.04, '', 95.020, '', 0.227, ''],
+    ["2020", 84764, '', 17.617, '', 15.90, '', 77.837, '', -0.752, ''],
+    ["2021", 85346, '', 20.311, '', 14.66, '', 79.596, '', 1.485, ''],
+    ["2022", 76095, '', 20.867, '', 12.43, '', 80.307, '', 7.847, '']
   ];
 
     const data = exampleData;
@@ -130,9 +130,9 @@ export function LineChartFiltered() {
 
     const metricDescriptions = {
         'GDP Per Capita': 'During periods of economic growth, rising GDP per capita can lead to an increase in birth rates. Economic improvement often brings better living conditions, improved healthcare, and increased optimism about the future, encouraging families to have more children. This phenomenon can be seen in some emerging economies where economic prosperity instills confidence and resources necessary to support larger families. As GDP declines families are not confident about having children and as a result birth rates decline.',
-        'Unemployment Rate': 'The unemployment rate and birth rates often exhibit an inverse relationship. Higher unemployment rates can lead to economic insecurity and reduced household income, discouraging families from having children. Conversely, lower unemployment rates typically correlate with greater economic stability, increased disposable income, and a more favorable environment for family planning and child-rearing. This pattern underscores how economic conditions directly impact fertility decisions within societies.',
-        'Emigration Rate' : 'Emigration rates can influence birth rates in complex ways. High emigration rates may lead to demographic shifts, reducing the population of childbearing age and potentially lowering birth rates due to a smaller reproductive pool. Conversely, low emigration rates can contribute to a stable population structure conducive to higher birth rates as families feel more secure about their future within the country. No data was found before 1998.',
-        'Inflation Rate' : 'The inflation rate can impact birth rates through economic uncertainty and financial stability. High inflation rates often lead to increased living costs, making it more challenging for families to afford child-rearing expenses, thus potentially lowering birth rates. Conversely, stable or lower inflation rates may contribute to economic confidence and affordability, potentially supporting higher birth rates as families feel more secure about their financial future.'
+        'Unemployment Rate %': 'The unemployment rate and birth rates often exhibit an inverse relationship. Higher unemployment rates can lead to economic insecurity and reduced household income, discouraging families from having children. Conversely, lower unemployment rates typically correlate with greater economic stability, increased disposable income, and a more favorable environment for family planning and child-rearing. This pattern underscores how economic conditions directly impact fertility decisions within societies.',
+        'Emigration' : 'Emigration rates can influence birth rates in complex ways. High emigration rates may lead to demographic shifts, reducing the population of childbearing age and potentially lowering birth rates due to a smaller reproductive pool. Conversely, low emigration rates can contribute to a stable population structure conducive to higher birth rates as families feel more secure about their future within the country. No data was found before 1998.',
+        'Inflation Rate %' : 'The inflation rate can impact birth rates through economic uncertainty and financial stability. High inflation rates often lead to increased living costs, making it more challenging for families to afford child-rearing expenses, thus potentially lowering birth rates. Conversely, stable or lower inflation rates may contribute to economic confidence and affordability, potentially supporting higher birth rates as families feel more secure about their financial future.'
     };
   
     const normalizeData = (data) => {
@@ -197,6 +197,9 @@ export function LineChartFiltered() {
   
   
     return (
+        <>
+        <h1 className=" text-left pl-5 text-[30px] font-bold">Comparison with other metrics over time</h1>
+        <h3 className=" text-left pl-5 pr-60 text-[15px]">The values of all the line charts have been normalized in a range from 0 to 1. This was performed to visualize the charts with different values on top of each other in order to properly compare them. Hovering on the lines, will make a tooltip with the actual values appear.</h3>
         <div className="flex justify-center items-center p-3">
             <div className='pl-5' style={{marginRight: '-60px'}}>
                 <label className='text-left' style={{ display: 'block', marginBottom: '10px'}}>
@@ -210,24 +213,24 @@ export function LineChartFiltered() {
                 <label className='text-left' style={{ display: 'block', marginBottom: '10px'}}>
                     <input
                     type="radio"
-                    checked={selectedMetric === 'Unemployment Rate'}
-                    onChange={() => toggleMetric('Unemployment Rate')}
+                    checked={selectedMetric === 'Unemployment Rate %'}
+                    onChange={() => toggleMetric('Unemployment Rate %')}
                     />
                     <span style={{marginLeft: '4px'}}>Unemployment Rate</span>
                 </label>
                 <label className='text-left' style={{ display: 'block', marginBottom: '10px'}}>
                     <input
                     type="radio"
-                    checked={selectedMetric === 'Emigration Rate'}
-                    onChange={() => toggleMetric('Emigration Rate')}
+                    checked={selectedMetric === 'Emigration'}
+                    onChange={() => toggleMetric('Emigration')}
                     />
-                    <span style={{marginLeft: '4px'}}>Emigration Rate</span>
+                    <span style={{marginLeft: '4px'}}>Emigration</span>
                 </label>
                 <label className='text-left' style={{ display: 'block', marginBottom: '10px'}}>
                     <input
                     type="radio"
-                    checked={selectedMetric === 'Inflation Rate'}
-                    onChange={() => toggleMetric('Inflation Rate')}
+                    checked={selectedMetric === 'Inflation Rate %'}
+                    onChange={() => toggleMetric('Inflation Rate %')}
                     />
                     <span style={{marginLeft: '4px'}}>Inflation Rate</span>
                 </label>
@@ -246,6 +249,7 @@ export function LineChartFiltered() {
                 {metricDescriptions[selectedMetric]}
             </p>
       </div>
+      </>
     );
 };
 
