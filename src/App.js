@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { CustomNavbar } from './components/CustomNavbar';
 import Team from './components/Team';
 import Home from './components/Home';
+import ReferencesPage from './components/Reference';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/ref" element={<ReferencesPage />} />
       </Routes>
 
     </>
