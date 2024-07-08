@@ -2,12 +2,13 @@ import React from "react"
 import { Chart } from "react-google-charts";
 import './index.css'
 import '../../resources/animations/slideFadeIn.css'
+import Box from "@mui/material/Box";
 
 
 export default function Mothers(){
     
     const motherAge = [
-        ["Year", "Average age of the mother at birth"],
+        ["Year", "Average age of the mother at first birth"],
         ["2000", 29.6],
         ["2001", 29.3],
         ["2002", 29.4],
@@ -227,39 +228,64 @@ export default function Mothers(){
     };
     return(
     <>
-        <h1 className='text-blue text-[40px] pl-5 text-left font-bold'>
-            Shrinking Greece: The Population Collapse 
+        <h1 className='text-blue text-[40px] pl-3 text-left font-bold'>
+            Motherhood
         </h1>
-        <p className='text-blue text-[15px] p-5 text-justify '>
-            From 2000 to 2021, the average age of mothers at birth in Greece rose steadily from 29.6 to 32.0 years. This increase aligns with societal trends such as higher education and career prioritization among women. Meanwhile, the fertility rate declined slightly from 1.300 in 2000 to 1.279 in 2021, reflecting economic and cultural factors that influence family planning and childbearing decisions.
-        </p>
-        <div className="flex justify-center items-center p-1">
-             <Chart
-                chartType="LineChart"
-                width="100%"
-                height="400px"
-                data={motherAge}
-                options={optionsMother}
-                className={'intro-chart chart-animate'}
-            />
-            <Chart
-                chartType="LineChart"
-                width="100%"
-                height="400px"
-                data={fertilityRateData}
-                options={optionFertility}
-                className={'intro-chart chart-animate'}
-            />
-            <Chart
-                chartType="LineChart"
-                width="100%"
-                height="400px"
-                data={mothersOver40}
-                options={optionOver40}
-                className={'intro-chart chart-animate'}
-            />
+        <div className="flex flex-row justify-center items-center">
+            <p className='text-blue w-[50%] text-[15px] p-5 text-justify mb-1'>
+                An increasing mean age of mothers and the decreasing fertility rates and a at first birth are interconnected
+                trends that have significant demographic and societal implications.
+                From 2000 to 2021, the average age of mothers at birth in Greece rose steadily from 29.6 to 32.0 years.
+                Meanwhile, the fertility rate declined slightly from 1.300 in 2000 to 1.279 in 2021.
+                <br/><br/>
+                Lower fertility rates indicate that
+                women are having fewer children on average, which can contribute to a declining population growth rate.
+                This
+                trend is often influenced by factors such as increased access to education and career opportunities for
+                women, economic considerations, and the availability of family planning methods.
+                <br/><br/>
+                The increasing mean age of mothers at first birth reflects a shift in the timing of childbearing, with
+                many women choosing to have children later in life, as we observe that the number women that give birth to
+                children and are over 40 years old is significantly increasing.
+            </p>
+
+            <Box sx={{width: '80%', margin: 'auto', padding: 'top'}}>
+                <Chart
+                    chartType="LineChart"
+                    width="100%"
+                    height="400px"
+                    data={motherAge}
+                    options={optionsMother}
+                    className={'intro-chart chart-animate'}
+                />
+            </Box>
         </div>
-    </>  
+
+        <div className="flex mr-10 justify-stretch">
+            <Box sx={{width: '50%', padding: 'left'}}>
+                <Chart
+                    chartType="LineChart"
+                    width="100%"
+                    height="400px"
+                    data={fertilityRateData}
+                    options={optionFertility}
+                    className={'intro-chart chart-animate'}
+                />
+            </Box>
+            <Box sx={{width: '50%', padding: 'left'}}>
+                <Chart
+                    chartType="LineChart"
+                    width="100%"
+                    height="400px"
+                    data={mothersOver40}
+                    options={optionOver40}
+                    className={'intro-chart chart-animate'}
+                />
+            </Box>
+
+
+        </div>
+    </>
     )
-    
+
 }

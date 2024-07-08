@@ -163,7 +163,7 @@ const AgeGroupsComponent = () => {
                     valueLabelDisplay="auto"
                     sx={{ color: 'white', flexGrow: 1 }}
                 />
-                <IconButton onClick={togglePlaying} sx={{ color: 'red' }}>
+                <IconButton onClick={togglePlaying} sx={{ color: '#FFA500' }}>
                     {playing ? <PauseIcon /> : <PlayArrowIcon />}
                 </IconButton>
             </Box>
