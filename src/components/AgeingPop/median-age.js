@@ -88,7 +88,7 @@ const options = {
 
 const LineChartComponent = () => {
     return (
-        <Box sx={{ width: '100%', margin: 'auto' }}>
+        <Box className='pb-14' sx={{ width: '100%', margin: 'auto' }}>
             <Chart
                 chartType="LineChart"
                 width="100%"

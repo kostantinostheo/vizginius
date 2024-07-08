@@ -6,8 +6,8 @@ import ChartHouse from "./ChartHouse"
 export default function Housing()
 {
     return(
-    <>
-        <h1 className=" text-left pl-5 text-[30px] font-bold"> A Marathon Run to Homeownership! </h1>
+    <div className="pb-5">
+        <h1 className=" text-left pl-5 text-[30px] font-bold"> A Marathon Run to Homeownership </h1>
         
         <h2 className=" text-left pl-5 text-[20px] text-blue-400"> The Theory </h2>
        
@@ -20,7 +20,7 @@ export default function Housing()
            The high cost of housing relative to average incomes in Greece can potentially impact birth rates by discouraging couples from starting or expanding their families due to financial concerns. Higher housing costs may lead to delayed family planning decisions as individuals prioritize financial stability over starting a family.
         </p>
         <ChartHouse/>
-    </>  
+    </div>
     )
     
 }

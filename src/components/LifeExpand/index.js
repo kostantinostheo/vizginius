@@ -51,7 +51,7 @@ const options = {
 const LifeExpand = () => {
   return (
     <>
-    <h1 className=" text-left pl-5 text-[30px] font-bold">The Changing Dynamics of Family Life! (1960-2022)</h1>
+    <h1 className="text-left pl-5 text-[30px] font-bold">The Changing Dynamics of Family Life</h1>
     <div className="flex justify-center items-center p-3">
         <Chart
             chartType="ColumnChart"

@@ -15,7 +15,7 @@ export function GeoChartGreece() {
     const svgRef = useRef();
 
     const options = {
-        title: `${selectedRegion} Birth Rate Over Time (1999-2022)`,
+        title: `${selectedRegion} Births Over Time (1999-2022)`,
         hAxis: { 
             title: 'Year' ,
             ticks: [
@@ -36,7 +36,7 @@ export function GeoChartGreece() {
             },
         },
         vAxis: { 
-            title: 'Birth Rate',
+            title: 'Number of Births',
             textStyle: {
               color: '#FFFFFF', // Y-axis text color
             },

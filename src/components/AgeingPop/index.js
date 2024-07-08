@@ -1,7 +1,4 @@
 import React from "react";
-import {Chart} from "react-google-charts";
-import MedianAge from "./median-age";
-import AgeGroups from "./age-groups";
 import AgeGroupsComponent from "./age-groups";
 import LineChartComponent from "./median-age";
 
@@ -10,8 +7,8 @@ export default function AgeingPop()
 {
     return(
         <>
-            <h1 className='text-blue text-[40px] pl-5 text-left font-bold'>
-                An ageing population...
+            <h1 className='text-blue text-[30px] pl-5 text-left font-bold'>
+                An Ageing Population...
             </h1>
             <div className="flex flex-row justify-center items-center">
                 <p className='text-blue w-[40%] text-[15px] p-5 text-justify mb-12'>
