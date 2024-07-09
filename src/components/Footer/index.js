@@ -8,7 +8,7 @@ const Footer = () => {
                 &copy; {new Date().getFullYear()} Data Visualization (Μ126) and VizGenius. All rights reserved.
             </div>
             <div className="flex space-x-4">
-                <Link to="/" className="nav-link hover:underline">
+                <Link exact to="/" className="nav-link hover:underline">
                     Home
                 </Link>
                 <Link to="/team" className="nav-link hover:underline">
