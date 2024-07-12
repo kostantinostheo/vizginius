@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
+    <div className="App">
       <div className="App">
         <CustomNavbar/>
       </div>
@@ -21,7 +21,7 @@ function App() {
         <Route path="/video" element={<Video />} />
       </Routes>
       <Footer/>
-    </>
+    </div>
   );
 }
 

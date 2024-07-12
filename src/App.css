@@ -1,9 +1,9 @@
 .App {
   text-align: center;
   background-color: #111827;
-  height: fit-content;
   color: white;
   font-family: "Montserrat";
+  height: fit-content;
 }
 
 .App-logo {

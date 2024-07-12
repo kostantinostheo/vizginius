@@ -4,7 +4,7 @@ import { Chart } from 'react-google-charts';
 import './index.css'
 import csv_data from '../../resources/datasets/birth_rates_greece.csv'
 import greece_geojson from '../../resources/datasets/greece-regions.geojson'
-
+import Slider from "@mui/material/Slider";
 
 export function GeoChartGreece() {
     const [data, setData] = useState([]);
@@ -221,15 +221,15 @@ export function GeoChartGreece() {
     return (
         <div className="flex justify-center items-center p-3">
             <div className={'leftToRightAnimate'}>
-                <div style={{ "width": 600, "height":20, textAlign: 'center', marginBottom: '20px' }}>
-                    <input
-                        type="range"
-                        style={{ width: '200px' }} // Adjust the width here
-                        min="1999"
-                        max="2022"
+                <div className='flex justify-center items-center h-fit gap-5'  style={{ "width": "auto",  textAlign: 'center', }}>
+                    <Slider
                         value={year}
-                        step="1"
-                        onChange={(e) => setYear(+e.target.value)}
+                        onChange={(e, newValue) => setYear(newValue)}
+                        valueLabelDisplay="auto"
+                        min={1999}
+                        max={2022}
+                        className='flex items-center justify-center p-0 m-0'  
+                        style={{ width: '80%', color: '#FFFFFF', height:"20%" }}
                     />
                     <span style={{  marginLeft: '10px' }}>{year}</span>
                 </div>

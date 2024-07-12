@@ -1,6 +1,5 @@
 import React from "react"
 import { Chart } from "react-google-charts";
-import './index.css'
 import '../../resources/animations/slideFadeIn.css'
 import Box from "@mui/material/Box";
 

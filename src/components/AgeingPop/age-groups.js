@@ -163,7 +163,7 @@ const AgeGroupsComponent = () => {
                     marks
                     min={1990}
                     max={2023}
-                    valueLabelDisplay="auto"
+                    valueLabelDisplay="on" 
                     sx={{ color: 'white', flexGrow: 1 }}
                 />
             </Box>

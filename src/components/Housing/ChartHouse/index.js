@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Chart } from 'react-google-charts';
 import Switch from "react-switch";
 import { FaChartLine, FaChartColumn, FaEye, FaEyeSlash } from "react-icons/fa6";
+import Slider from "@mui/material/Slider";
 
 export default function ChartHouse() {
     const initialSqMeterValue = 80; // Default square meter value
@@ -124,17 +125,18 @@ export default function ChartHouse() {
                 legendToggle
             />
             <div className='mb-6 flex justify-center items-center gap-x-6'>
-                <div className='flex items-center justify-center'>
+                <div className='flex items-center justify-center w-[20%]'>
                     <label htmlFor="sqMeterSlider" className='text-white mr-3'>Square Meters: {sqMeterValue}</label>
-                    <input
-                        type="range"
+                    <Slider
                         id="sqMeterSlider"
                         name="sqMeterSlider"
-                        min="1"
-                        max="100"
                         value={sqMeterValue}
                         onChange={handleSqMeterChange}
-                        className=''
+                        min={1}
+                        max={100}
+                        valueLabelDisplay="auto"
+                        sx={{ color: 'white', flexGrow: 1 }}
+                        style={{ width: '60%', color: '#FFFFFF', height:"20%" }}
                     />
                 </div>
                 

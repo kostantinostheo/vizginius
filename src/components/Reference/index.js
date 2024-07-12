@@ -3,6 +3,7 @@ import { FaReact } from 'react-icons/fa';
 import { GrGoogle } from "react-icons/gr";
 import { SiD3Dotjs } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
+import ScrollToTop from 'react-scroll-to-top';
 
 const references = [
     {
@@ -79,7 +80,11 @@ const ReferencesPage = () => {
                 </ul>
 
             </div>
-            
+            <ScrollToTop 
+                color="white" 
+                smooth 
+                style={{borderRadius:"10%", display:"flex", justifyItems:"center", alignItems:"center",justifyContent:"center", backgroundColor:"#314158", opacity:"60%"}}
+            />
         </div>
     );
 }
