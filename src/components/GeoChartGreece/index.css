@@ -1,0 +1,31 @@
+.tooltip {
+    position: absolute;
+    visibility: hidden;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.chart-container {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.chart-container.visible {
+  opacity: 1;
+}
