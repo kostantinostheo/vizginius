@@ -133,7 +133,7 @@ const AgeGroupsComponent = () => {
                     setData(generateData(newYear));
                     return newYear;
                 });
-            }, 250);
+            }, 500);
         }
         return () => clearInterval(timer);
     }, [playing]);
