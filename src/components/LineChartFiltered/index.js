@@ -165,7 +165,6 @@ export function LineChartFiltered() {
                 }
             });
         });
-        console.log(returnValue)
         return returnValue;
     };
 
@@ -196,59 +195,55 @@ export function LineChartFiltered() {
     });
   
   
+    const metricLabels = {
+        'GDP Per Capita': 'GDP Per Capita',
+        'Unemployment Rate %': 'Unemployment Rate',
+        'Emigration': 'Emigration',
+        'Inflation Rate %': 'Inflation Rate',
+    };
+
     return (
         <>
-        <h1 className=" text-left pl-5 text-[30px] font-bold">Comparison with other metrics over time</h1>
-        <h3 className=" text-left pl-5 pr-60 text-[15px]">The values of all the line charts have been normalized in a range from 0 to 1. This was performed to visualize the charts with different values on top of each other in order to properly compare them. Hovering on the lines, will make a tooltip with the actual values appear.</h3>
-        <div className="flex justify-center items-center p-3">
-            <div className='pl-5' style={{marginRight: '-60px'}}>
-                <label className='text-left' style={{ display: 'block', marginBottom: '10px'}}>
-                    <input
-                    type="radio"
-                    checked={selectedMetric === 'GDP Per Capita'}
-                    onChange={() => toggleMetric('GDP Per Capita')}
-                    />
-                    <span style={{marginLeft: '4px'}}>GDP Per Capita</span>
-                </label>
-                <label className='text-left' style={{ display: 'block', marginBottom: '10px'}}>
-                    <input
-                    type="radio"
-                    checked={selectedMetric === 'Unemployment Rate %'}
-                    onChange={() => toggleMetric('Unemployment Rate %')}
-                    />
-                    <span style={{marginLeft: '4px'}}>Unemployment Rate</span>
-                </label>
-                <label className='text-left' style={{ display: 'block', marginBottom: '10px'}}>
-                    <input
-                    type="radio"
-                    checked={selectedMetric === 'Emigration'}
-                    onChange={() => toggleMetric('Emigration')}
-                    />
-                    <span style={{marginLeft: '4px'}}>Emigration</span>
-                </label>
-                <label className='text-left' style={{ display: 'block', marginBottom: '10px'}}>
-                    <input
-                    type="radio"
-                    checked={selectedMetric === 'Inflation Rate %'}
-                    onChange={() => toggleMetric('Inflation Rate %')}
-                    />
-                    <span style={{marginLeft: '4px'}}>Inflation Rate</span>
-                </label>
+        <h1 className="section-title text-left pl-5 text-[28px] font-bold mt-8">
+            Comparison with Other Metrics Over Time
+        </h1>
+        <p className="text-gray-400 text-[13px] pl-5 pr-5 mt-2 mb-5">
+            All series are normalised to 0–1 to overlay charts with different scales.
+            Hover any data point to see actual values.
+        </p>
+
+        <div className="flex flex-col lg:flex-row gap-5 px-5 pb-6">
+            {/* Metric selector */}
+            <div className="flex flex-col gap-2 w-full lg:w-40 shrink-0">
+                <p className="text-[11px] text-gray-500 uppercase tracking-wider mb-1">Compare with</p>
+                {Object.entries(metricLabels).map(([key, label]) => (
+                    <button
+                        key={key}
+                        onClick={() => toggleMetric(key)}
+                        className={`metric-tab${selectedMetric === key ? ' active' : ''}`}
+                    >
+                        {label}
+                    </button>
+                ))}
             </div>
-            <div style={{width: '60%'}}>
+
+            {/* Chart */}
+            <div className="chart-card flex-1 min-w-0">
                 <Chart
                     chartType="LineChart"
                     width="100%"
-                    height="450px"
+                    height="420px"
                     data={filteredData}
                     options={options}
                 />
             </div>
 
-            <p className={'text-justify p-3 rightToLeftAnimate'} style={{width: '30%'}}>
+            {/* Description */}
+            <div className="info-panel w-full lg:w-64 shrink-0 text-[13px] text-gray-300 leading-relaxed">
+                <p className="text-[11px] text-gray-500 uppercase tracking-wider mb-2">{metricLabels[selectedMetric]}</p>
                 {metricDescriptions[selectedMetric]}
-            </p>
-      </div>
+            </div>
+        </div>
       </>
     );
 };

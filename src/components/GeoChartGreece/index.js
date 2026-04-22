@@ -77,12 +77,7 @@ export function GeoChartGreece() {
 
     useEffect(() => {
         if (geoData && data.length) {
-            console.log('GeoData:', geoData);
-            console.log('CSV Data:', data);
-            
-            // Filter data for the selected year
             const filteredData = data.filter(d => d.Year === year);
-            console.log('Filtered Data:', filteredData);
 
 
             const width = 600;
@@ -117,15 +112,19 @@ export function GeoChartGreece() {
                 .attr('stroke', '#000')
                 .attr('stroke-width', 1);
 
-            // Add tooltip
+            // Add tooltip (remove any stale one first to prevent leak)
+            d3.selectAll('.geo-tooltip').remove();
             const tooltip = d3.select('body').append('div')
-                .attr('class', 'tooltip')
+                .attr('class', 'geo-tooltip')
                 .style('position', 'absolute')
                 .style('visibility', 'hidden')
-                .style('background', '#fff')
-                .style('padding', '5px')
-                .style('border', '1px solid #ccc')
-                .style('border-radius', '5px');
+                .style('background', '#1f2937')
+                .style('color', '#fff')
+                .style('padding', '6px 10px')
+                .style('border', '1px solid #4b5563')
+                .style('border-radius', '6px')
+                .style('font-size', '13px')
+                .style('pointer-events', 'none');
 
             regions
                 .on('mouseover', (event, d) => {
@@ -216,50 +215,89 @@ export function GeoChartGreece() {
             }
 
         }
+        return () => { d3.selectAll('.geo-tooltip').remove(); };
+    // selectedRegion intentionally excluded: adding it would re-run the full D3 render on every click
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [geoData, data, year]);
 
     return (
-        <div className="flex justify-center items-center p-3">
-            <div className={'leftToRightAnimate'}>
-                <div className='flex justify-center items-center h-fit gap-5'  style={{ "width": "auto",  textAlign: 'center', }}>
+        <div>
+        <h1 className="section-title text-left pl-5 text-[30px] font-bold mt-6">Birth Rates Across Greece&apos;s Regions</h1>
+        <p className="text-gray-400 text-[13px] pl-5 pr-5 mt-1 mb-5">
+            Explore birth rate changes across Greece&apos;s 13 regions (1999–2022). Drag the slider to change the year — darker colours indicate fewer births.
+        </p>
+
+        <div className="flex flex-col lg:flex-row items-start gap-5 px-4 pb-4">
+
+            {/* Left: slider + D3 map */}
+            <div className="leftToRightAnimate overflow-x-auto shrink-0">
+                <div className="flex items-center gap-3 mb-3 px-1">
                     <Slider
                         value={year}
                         onChange={(e, newValue) => setYear(newValue)}
-                        valueLabelDisplay="auto"
+                        valueLabelDisplay="off"
                         min={1999}
                         max={2022}
-                        className='flex items-center justify-center p-0 m-0'  
-                        style={{ width: '80%', color: '#FFFFFF', height:"20%" }}
+                        sx={{
+                            color: '#3b82f6',
+                            flex: 1,
+                            '& .MuiSlider-thumb': { width: 16, height: 16 },
+                        }}
+                        style={{ flex: 1 }}
                     />
-                    <span style={{  marginLeft: '10px' }}>{year}</span>
+                    <span className="bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-lg min-w-[58px] text-center shrink-0">
+                        {year}
+                    </span>
                 </div>
                 <svg ref={svgRef}></svg>
             </div>
 
-            <div className={'rightToLeftAnimate'} style={{width: '750px', marginTop: '-80px'}}>
-                {selectedRegion && (
-                    <div className={`chart-container ${selectedRegion ? 'visible' : ''}`}>
+            {/* Right: region chart + stats + description */}
+            <div className="rightToLeftAnimate flex flex-col gap-4 w-full lg:flex-1 min-w-0">
+                {/* Region chart */}
+                {selectedRegion && regionData.length > 1 && (
+                    <div className="chart-card">
+                        <p className="text-[10px] text-gray-500 uppercase tracking-wider">Selected Region</p>
+                        <p className="text-base font-bold text-white mt-0.5 mb-2">{selectedRegion}</p>
                         <Chart
                             chartType="LineChart"
-                            width="750px"
-                            height="200px"
+                            width="100%"
+                            height="190px"
                             data={regionData}
                             options={options}
                         />
                     </div>
                 )}
-                <p className={'text-justify p-3 rightToLeftAnimate' }>
-                    The visualization presented here focuses on birth rate trends <b>within Greece's regions</b> over time.
-                    It illustrates how birth rates have fluctuated across all regions <b>after the administrative changes of 1999.</b>
-                    <br></br>
-                    <br></br>
-                    This visualization provides a historical perspective on demographic changes in Greece's regions.
-                    The highlight that can be observed is the <b>42.899 all time high in Attica in 2008</b> compared to the all time low in the same region in <b>2022 that was recorded as 28.125</b>
-                    <br></br>
-                    <br></br>
-                    <b>Clicking a region</b> shows a line graph that highlights the drop in birth rates in that specific region.
-                </p>
+
+                {/* Key stats */}
+                <div className="grid grid-cols-2 gap-3">
+                    <div className="stat-card">
+                        <p className="text-xl font-bold text-emerald-400">42,899</p>
+                        <p className="text-[11px] text-gray-400 mt-1">All-time high births</p>
+                        <p className="text-[10px] text-gray-600 mt-0.5">Attica · 2008</p>
+                    </div>
+                    <div className="stat-card">
+                        <p className="text-xl font-bold text-red-400">28,125</p>
+                        <p className="text-[11px] text-gray-400 mt-1">All-time low births</p>
+                        <p className="text-[10px] text-gray-600 mt-0.5">Attica · 2022</p>
+                    </div>
+                </div>
+
+                {/* Description */}
+                <div className="info-panel text-[13px] text-gray-300 leading-relaxed">
+                    Every region shows a consistent downward trend since 2008.
+                    Attica — Greece&apos;s most populous region — recorded a
+                    <span className="text-emerald-400 font-semibold"> 34% drop</span> in births
+                    over just 14 years, reflecting a crisis that spans the entire country.
+                </div>
+
+                {/* Interaction tip */}
+                <div className="flex items-center gap-2 bg-blue-500/10 border border-blue-500/25 rounded-lg px-3 py-2">
+                    <span className="text-lg">👆</span>
+                    <p className="text-[12px] text-blue-300">Click any region on the map to view its birth rate trend over time</p>
+                </div>
             </div>
+        </div>
         </div>
     );
 };

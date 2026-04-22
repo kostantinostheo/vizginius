@@ -1,26 +1,41 @@
 import React from "react"
-
-import '../../resources/animations/slideFadeIn.css'
 import ChartHouse from "./ChartHouse"
 
-export default function Housing()
-{
-    return(
-    <div className="pb-5">
-        <h1 className=" text-left pl-5 text-[30px] font-bold"> A Marathon Run to Homeownership </h1>
-        
-        <h2 className=" text-left pl-5 text-[20px] text-blue-400"> The Theory </h2>
-       
-        <p className=" pl-5 text-[15px] mr-32 text-justify"> 
-            Based on the <a className=" text-blue-400" href="http://demographia.com/db-intlhouse.htm" target="noreferrer" >demographia.com</a>, 
-            the average size of a house in Greece is approximately 80 square meters. Using this data, we can track the average price of an 80-square-meter house in Greece over the years. By incorporating the average wage in Greece as well, we can gain insight into the challenges that average individuals face in affording a new house.
-            </p>
-        <h2 className="pl-5 text-[20px] text-blue-400 pt-3 text-left"> The Conclusion </h2>
-        <p className=" text-left pl-5 text-[15px] mr-32"> 
-           The high cost of housing relative to average incomes in Greece can potentially impact birth rates by discouraging couples from starting or expanding their families due to financial concerns. Higher housing costs may lead to delayed family planning decisions as individuals prioritize financial stability over starting a family.
-        </p>
-        <ChartHouse/>
-    </div>
-    )
-    
+export default function Housing() {
+    return (
+        <div className="pb-5 pt-2">
+            <h1 className="section-title text-left pl-5 text-[28px] font-bold mt-6">
+                A Marathon Run to Homeownership
+            </h1>
+
+            {/* Theory + Conclusion panels side by side */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-5 mt-5">
+                <div className="info-panel">
+                    <h3 className="text-blue-400 font-semibold text-[15px] mb-2 flex items-center gap-2">
+                        <span>📐</span> The Theory
+                    </h3>
+                    <p className="text-gray-300 text-[14px] leading-relaxed text-justify">
+                        Based on <a className="text-blue-400 hover:underline" href="http://demographia.com/db-intlhouse.htm" target="_blank" rel="noreferrer">demographia.com</a>,
+                        the average house size in Greece is approximately <span className="text-white font-semibold">80 m²</span>.
+                        Tracking the price of an 80 m² home alongside the average annual wage reveals
+                        the widening gap between what Greeks earn and what housing costs.
+                    </p>
+                </div>
+
+                <div className="info-panel">
+                    <h3 className="text-amber-400 font-semibold text-[15px] mb-2 flex items-center gap-2">
+                        <span>💡</span> The Conclusion
+                    </h3>
+                    <p className="text-gray-300 text-[14px] leading-relaxed text-justify">
+                        High housing costs relative to incomes discourage couples from starting or expanding
+                        their families. With house prices rising <span className="text-amber-400 font-semibold">424%</span> since 2000 vs.
+                        wages rising only <span className="text-amber-400 font-semibold">127%</span>, financial insecurity becomes a
+                        direct brake on birth rates.
+                    </p>
+                </div>
+            </div>
+
+            <ChartHouse />
+        </div>
+    );
 }
