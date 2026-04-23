@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaReact } from 'react-icons/fa';
 import { GrGoogle } from "react-icons/gr";
-import { SiD3Dotjs } from "react-icons/si";
+import { SiD3 as SiD3Dotjs } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import ScrollToTop from 'react-scroll-to-top';
 
@@ -36,9 +36,9 @@ const references = [
 const ReferencesPage = () => {
     return (
         <div className="font-sans bg-[#111827] h-full flex justify-center items-start">
-            <div className='w-[50%]'>
+            <div className='w-full md:w-3/4 lg:w-1/2 px-4'>
             <div className='mt-10'>
-                    <h1 className='text-blue text-[40px] pb-10 text-left font-bold text-white flex justify-center'>
+                    <h1 className='text-[40px] pb-10 text-left font-bold text-white flex justify-center'>
                         TOOLS
                     </h1>
                     <div className='flex justify-center items-center space-x-14 pb-14'>
@@ -60,7 +60,7 @@ const ReferencesPage = () => {
                         </div>
                     </div>
                 </div>
-                <h1 className='text-blue text-[40px] p-5 text-left font-bold text-white flex justify-center'>
+                <h1 className='text-[40px] p-5 text-left font-bold text-white flex justify-center'>
                     REFERENCES
                 </h1>
                 <ul className="list-none p-5">
