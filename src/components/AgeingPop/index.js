@@ -14,14 +14,13 @@ export default function AgeingPop() {
                 An Ageing Population...
             </h1>
 
-            {/* Top row: text + stat cards (left) | animated bar chart (right) */}
             <div className="flex flex-col lg:flex-row gap-6 px-5 mt-5">
                 <div className="w-full lg:w-2/5 flex flex-col gap-5">
                     <p className="text-gray-300 text-[14px] leading-relaxed text-justify">
                         Greece&apos;s population is ageing at one of the fastest rates in Europe.
                         From 1990 to 2023, the median age rose from
                         <span className="text-orange-400 font-semibold"> 36.0</span> to
-                        <span className="text-orange-400 font-semibold"> 46.5 years</span> — driven by persistently
+                        <span className="text-orange-400 font-semibold"> 46.5 years</span>, driven by persistently
                         low birth rates and rising life expectancy.
                         <br /><br />
                         The bar chart shows younger age groups (0–39) shrinking over time while
@@ -39,13 +38,11 @@ export default function AgeingPop() {
                     </div>
                 </div>
 
-                {/* Animated bar chart */}
                 <div className="chart-card w-full lg:w-3/5">
                     <AgeGroupsComponent />
                 </div>
             </div>
 
-            {/* Median age trend — full width */}
             <div className="chart-card mx-5 mt-5 mb-2">
                 <p className="text-[11px] text-gray-500 uppercase tracking-wider mb-0.5">Trend</p>
                 <p className="text-white font-semibold text-[14px] mb-3">Greece Median Age of Population (1990–2023)</p>

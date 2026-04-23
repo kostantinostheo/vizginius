@@ -1,4 +1,5 @@
 import React from "react"
+import { FaRulerCombined, FaLightbulb } from "react-icons/fa6";
 import ChartHouse from "./ChartHouse"
 
 export default function Housing() {
@@ -8,11 +9,10 @@ export default function Housing() {
                 A Marathon Run to Homeownership
             </h1>
 
-            {/* Theory + Conclusion panels side by side */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-5 mt-5">
                 <div className="info-panel">
                     <h3 className="text-blue-400 font-semibold text-[15px] mb-2 flex items-center gap-2">
-                        <span>📐</span> The Theory
+                        <FaRulerCombined size={15} /> The Theory
                     </h3>
                     <p className="text-gray-300 text-[14px] leading-relaxed text-justify">
                         Based on <a className="text-blue-400 hover:underline" href="http://demographia.com/db-intlhouse.htm" target="_blank" rel="noreferrer">demographia.com</a>,
@@ -24,7 +24,7 @@ export default function Housing() {
 
                 <div className="info-panel">
                     <h3 className="text-amber-400 font-semibold text-[15px] mb-2 flex items-center gap-2">
-                        <span>💡</span> The Conclusion
+                        <FaLightbulb size={15} /> The Conclusion
                     </h3>
                     <p className="text-gray-300 text-[14px] leading-relaxed text-justify">
                         High housing costs relative to incomes discourage couples from starting or expanding

@@ -1,16 +1,6 @@
 import React from "react";
 import { Chart } from "react-google-charts";
-
-const rawData = [
-    ["Decade", "Life Expectancy", "Average Household Size"],
-    ["1960–1969", 70.9, 4.0],
-    ["1970–1979", 73.5, 3.8],
-    ["1980–1989", 75.9, 3.6],
-    ["1990–1999", 77.4, 3.3],
-    ["2000–2009", 78.8, 3.0],
-    ["2010–2019", 81.1, 2.8],
-    ["2020–2022", 80.7, 2.6],
-];
+import rawData from '../../resources/datasets/life-expectancy-greece.json';
 
 const normalize = (value, min, max) => 1 + (value - min) / (max - min);
 const getCol = (data, i) => data.slice(1).map(r => r[i]);
@@ -46,8 +36,8 @@ const options = {
 };
 
 const lifeStats = [
-    { value: "81.1 yrs", label: "Life expectancy peak", sub: "2010–2019 avg", color: "text-orange-400" },
-    { value: "2.6", label: "Avg household size", sub: "2020–2022 (was 4.0 in 1960s)", color: "text-yellow-400" },
+    { value: "81.1 yrs", label: "Life expectancy peak", sub: "2010 - 2019 avg", color: "text-orange-400" },
+    { value: "2.6", label: "Avg household size", sub: "2020 - 2022 (was 4.0 in 1960s)", color: "text-yellow-400" },
 ];
 
 const LifeExpand = () => (
@@ -57,7 +47,6 @@ const LifeExpand = () => (
         </h1>
 
         <div className="flex flex-col lg:flex-row gap-6 px-5 mt-5 mb-4">
-            {/* Chart */}
             <div className="chart-card w-full lg:w-3/5">
                 <div className="flex items-start justify-between mb-2 flex-wrap gap-2">
                     <div>
@@ -76,13 +65,11 @@ const LifeExpand = () => (
                     options={options}
                 />
                 <p className="text-[11px] text-gray-600 mt-1 text-center">
-                    Values normalised to [1–2] so both series can be displayed on one axis
+                    Values normalised to [1 - 2] so both series can be displayed on one axis
                 </p>
             </div>
 
-            {/* Right panel */}
             <div className="w-full lg:w-2/5 flex flex-col gap-4">
-                {/* Stat cards */}
                 <div className="grid grid-cols-2 gap-3">
                     {lifeStats.map(s => (
                         <div key={s.label} className="stat-card">
@@ -93,15 +80,12 @@ const LifeExpand = () => (
                     ))}
                 </div>
 
-                {/* Key insight */}
                 <div className="info-panel text-[13px] text-gray-300 leading-relaxed">
-                    As life expectancy rose from <span className="text-orange-400 font-semibold">70.9 → 81.1 years</span>,
-                    average household size fell from <span className="text-yellow-400 font-semibold">4.0 → 2.6 people</span>.
+                    average household size fell from <span className="text-yellow-400 font-semibold">4.0 to 2.6 people</span>.
                     Longer lives reduce the perceived need for large families, while better healthcare
                     means fewer children are needed to ensure family continuity.
                 </div>
 
-                {/* Quote */}
                 <blockquote className="quote-card">
                     <p className="italic text-gray-300 text-[13px] leading-relaxed">
                         &quot;My grandmother, born in the 1930s, often told me stories about her six siblings.
