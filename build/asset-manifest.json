@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/vizginius/static/css/main.2267f4fc.css",
-    "main.js": "/vizginius/static/js/main.5a101f43.js",
+    "main.css": "/vizginius/static/css/main.6e685600.css",
+    "main.js": "/vizginius/static/js/main.bfef3017.js",
     "reactPlayerYouTube.js": "/vizginius/static/js/reactPlayerYouTube.a4497459.chunk.js",
     "reactPlayerSoundCloud.js": "/vizginius/static/js/reactPlayerSoundCloud.5b2ade6b.chunk.js",
     "reactPlayerVimeo.js": "/vizginius/static/js/reactPlayerVimeo.b06396c0.chunk.js",
@@ -21,8 +21,8 @@
     "static/media/logo-pie.png": "/vizginius/static/media/logo-pie.7db810a120d4bb1efb97.png",
     "static/media/birth_rates_greece.csv": "/vizginius/static/media/birth_rates_greece.1812bb844217bb5fd4ae.csv",
     "index.html": "/vizginius/index.html",
-    "main.2267f4fc.css.map": "/vizginius/static/css/main.2267f4fc.css.map",
-    "main.5a101f43.js.map": "/vizginius/static/js/main.5a101f43.js.map",
+    "main.6e685600.css.map": "/vizginius/static/css/main.6e685600.css.map",
+    "main.bfef3017.js.map": "/vizginius/static/js/main.bfef3017.js.map",
     "reactPlayerYouTube.a4497459.chunk.js.map": "/vizginius/static/js/reactPlayerYouTube.a4497459.chunk.js.map",
     "reactPlayerSoundCloud.5b2ade6b.chunk.js.map": "/vizginius/static/js/reactPlayerSoundCloud.5b2ade6b.chunk.js.map",
     "reactPlayerVimeo.b06396c0.chunk.js.map": "/vizginius/static/js/reactPlayerVimeo.b06396c0.chunk.js.map",
@@ -40,7 +40,7 @@
     "453.4ff4e91a.chunk.js.map": "/vizginius/static/js/453.4ff4e91a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2267f4fc.css",
-    "static/js/main.5a101f43.js"
+    "static/css/main.6e685600.css",
+    "static/js/main.bfef3017.js"
   ]
 }
